@@ -39,8 +39,8 @@ $ docker network create tryton
 2 Running tryton database server
 A database server may contain multiple different databases. People often confuse the term database to both mean:
 
-the related collection of structured data that is stored together, and
-the program that manipulates and manages access to this data.
+- the related collection of structured data that is stored together, and
+- the program that manipulates and manages access to this data.
 
 We will going to start a database server in the below steps
 
@@ -102,14 +102,18 @@ $ docker run --env DB_HOSTNAME=tryton-postgres --env DB_PASSWORD=${POSTGRES_PASS
 * --rm: ensure to remove the container because it isn’t needed anymore
 
 3. Running tryton server
-Tryton server is the one which provides the business logic.
 
+Tryton server is the one which provides the business logic. Tryton’s advanced modularity allows you to select the correct business logic for your requirements by activating only the modules that you intend to use.
+
+3.b Creating docker volume for data
+The tryton server is required for storing attachments or copies of sales invoice. To ensure the data do not get deleted
+ 
 
 
 
 
 
 **TODO**
-- [] Identify how can we collect account information from email boxes.
+- [ ] Identify how can we collect account information from email boxes.
 - [ ] Use gmail contancts to build a customer database 
 - [ ] Use csv upload for customer database
